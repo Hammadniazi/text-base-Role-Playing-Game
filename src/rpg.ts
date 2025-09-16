@@ -18,4 +18,11 @@ class Character {
       `${this.name} takes ${amount} damage and has ${this.#health} HP `
     );
   }
+
+  attack(target: Character): void {
+    console.log(
+      `${this.name} attacks ${target.name} for ${this.damage} damage!`
+    );
+    target.takeDamage(this.damage);
+  }
 }
